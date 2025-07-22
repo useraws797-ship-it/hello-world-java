@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    stages {
+        stage('Clone') {
+            steps {
+                git 'https://github.com/your-user/hello-world.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                echo 'Build stage - No real build for Hello World'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test stage - Simulating test'
+                sh 'echo "All tests passed!"'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                sh 'echo "Hello World deployed!"'
+            }
+        }
+    }
+}
