@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/your-user/hello-world.git'
+                git 'https://github.com/useraws797-ship-it/hello-world-java.git'
             }
         }
         stage('Build') {
